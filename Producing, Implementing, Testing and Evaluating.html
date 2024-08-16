@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+  body{
+    background-color:aliceblue;
+    color:darkblue;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+
+  header {
+    display:flex;
+    justify-content:space-around;
+    padding: 10px;  
+    border-radius: 10px;
+    background-color:darkblue;
+    color:aliceblue;
+  }
+
+  .navbar {
+    display:flex;
+    justify-content: space-around;
+    padding: 10px;  
+    border-radius: 10px;
+    background-color:darkblue;
+    color:azure;
+  }
+  
+</style>
+
+<header>
+    <pre style="font-family:'Times New Roman', Times, serif">
+   <h2>Develop your network of interconnected devices with naming conventions and update devices that are configured with safety protocols.
+Develop your network of interconnected devices considering security protocols and cybersecurity.
+Review and improve your network of interconnected devices.</h2>
+    Video record how you configure devices within a network, including naming the device.
+    Implement procedures and security protocols considering cybersecurity.
+    Evaluate the role of hardware and software related to the transmission of data.
+    </pre>
+</header>
+<hr>
+<div class="navbar">
+  <a href="ENT COM Task 2 Tiffany Lee.html" target="Homepage"><span style="color: aliceblue;">Homepage</span></a>
+  <a href="Identifying and Defining.html" target="Identifying and Defining"><span style="color: aliceblue;">Identifying and Defining</span></a>
+  <a href="Research and Planning.html" target="Research and Planning"><span style="color: aliceblue;">Research and Planning</span></a>
+  <a href="Logbook.html" target="Logbook"><span style="color: aliceblue;">Logbook</span></a>
+</div>
+
+<body>
+    <pre style="font-family:'Times New Roman', Times, serif"> 
+    <b>Network model:</b>
+    <img src="Screen 1.png" alt="Network model" style="width:500x;height:500px;">
+
+
+    <b>Video:</b>
+    <pre><video width="600" height="450" controls>
+        <source src="ENT COM networking assessment video (2).mp4" type="video/mp4"></pre>
+    
+    <b>Video Transcript:</b>
+    This network model in Cisco Packet Tracer is designed for a school. A school network provides reliable and secure connectivity for students, teachers, and administrative staff. It typically includes a combination of wired and wireless connections to ensure comprehensive coverage across different areas. The network infrastructure consists of routers and firewalls to manage traffic and ensure security. High-speed internet access is provided to support online learning and research. Cybersecurity measures including firewalls, antivirus software, different access privileges and regular updates are implemented to protect against threats and maintain a safe digital environment for all users.
+
+    The preliminary floor plan consists of two classrooms, A and B, a kitchen, office, admin office, bathroom, science lab, corridor, and computer room.
+    
+    This network model shows Classroom A and the Admin Office. I followed the plan when creating the network, but in the process I decided to change some aspects, which I will explain shortly. Key components include physical aspects of the room such as windows and doors, IoTs such as fans, and end devices such as PCs. I also implemented a fire safety system to ensure a safe school environment. End devices and IoTs are connected wirelessly to each room’s router, which is in turn connected to a central school router that links the network to the internet.
+    
+    Here an old car is used to simulate smoke or fire to test the fire safety system, and shows how the PC was configured to monitor and control the sensors and devices, as well as the conditions for the system. Instead of 0, 0.001 was put as the deciding level, as in the simulation, the smoke detector levels would not go below this number in a reasonable time.
+    The fire safety system is separate from the main network, and most IoTs and end devices are hardwired rather than wirelessly connected, as hardwired networks are less easily influenced as they are not linked to the internet thus are more reliable and avoid any cybersecurity threats. One gateway manages the school’s fire safety system, so when a fire is detected, interconnected sirens efficiently warn the entire school and sprinklers turn on to eliminate and prevent the fires.
+    
+    Data comes from various sources from students, teachers, and administrative staff, and is stored offsite on cloud storage over the internet using Google. Schools use public clouds which are provided by third-party service providers such as Google Cloud Platform (GCP), where users access data through web interfaces, APIs, or various client applications. This presents a wide range of services including block storage, file storage, and databases, and typically provides scalability, redundancy, and high availability. 
+    
+    The advantages of this storage method are that it is cost efficient as it eliminates any need for substantial upfront capital expenses, scalable as storage capacity is easily adjusted, accommodating both growth and downsizing as needed, and accessible as authorised users under the Department of Education can access their data from anywhere with an internet connection and facilitates remote work and collaboration. 
+    
+    Disadvantages of cloud storage encompasses data security concerns as data breaches and unauthorised access remain potential issues, but this is can be negated by setting strict access controls and limiting users to those under the Department of Education, compliance challenges as data may be subject to laws and regulations of the hosting country and could differ from those of the enterprise's home country, but this does not apply to this particular school network, hence the most prominent issue is potential downtime due to outages or maintenance, potentially disrupting access to critical data and services, staunchly impacting a learning environment. 
+    
+    As cloud storage operates on the internet, the central school router is connected to two gateways that were added to the network model to simulate connecting to the internet, represented by the PC, as Cisco Packet Tracer does not have an internet simulation function.
+    
+    The routers’ and gateways’ IP addresses were manually configured from 192.168.0.1 with a subnet mask of 255.255.0.0. For example, the Classroom A router (CLAwr.0.1) is 192.168.1.1 and the Admin Office router (ADMwr.0.1) is 192.168.2.1.
+    DHCP, which was enabled in router settings, automatically allocates and assigns device-specific IP addresses to each device on that router's network, ensuring that no two devices share an IP address and thus encounter connection errors. The ranges of IP addresses of IoTs connected to routers are as following; Classroom A (CLAwr.0.1) is 192.168.1.100 with a subnet mask of 255.255.255.0 and the Admin Office (ADMwr.0.1) is 192.168.2.100 with the same subnet mask.
+    
+    An orderly classification was assigned to this network, for example LABpc.0.1 for the lab PCs, CLAlig.0.1 for a Classroom A light, CLBfan.0.1 for a Classroom B fan.
+    Always ensure that all devices’ firmware is up to date, to avoid any potential issues.
+    
+    Straight through copper wires were used to connect devices that operate at different layers of the network model, such as a gateway and router, and crossover copper wires were used to link those that operate at the same layer, such as two routers.
+    
+    IoTs and routers were connected wirelessly by setting a unique service set identifier (SSID), replacing the module of devices such as laptops with a wireless WPC300N, and configuring the wireless settings to the router’s SSID.
+    
+    There are multiple methods to configure security protocols and uphold cybersecurity procedures;
+    Configuring the user account by manually setting an admin username and strong password in router settings, controlling the device’s access and connection by setting a fixed range of IP addresses as well as blocking or approving connections when identifying devices through MAC addresses, blocking certain applications to limit interactions and actions such as blocking FTP to limit file transfers, managing and assigning times for availability for network resources like servers, routers and internet connections during such times as school holidays, blocking or restricting the range of software ports such as specific download softwares that require specific ports to function, and firewalls that manage traffic which can be enabled in router settings.
+    
+    Here a packet is sent from the Classroom A PC (CLApc.0.1) to the laptop (CLAlap.0.1) through the router. The network is secure, as it displays how all other devices reject the package except the destination	address.
+    
+    This shows a manually configured ping from a traffic generator travelling from a laptop in Classroom A to one in the Admin Office.
+    
+    And that is how the network for a school was designed, created, and simulated.
+    </pre>
+
+</body>
+</html>
